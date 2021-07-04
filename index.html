@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+    </style>
 </head>
 
 <body>
@@ -47,60 +50,6 @@
                 page.render({ canvasContext: canvas.getContext('2d'), viewport: viewport });
             });
         }
-
-        // // If absolute URL from the remote server is provided, configure the CORS
-        // // header on that server.
-        // var pdfDoc = null,
-        //     pageNum = 1,
-        //     scale = 0.8,
-        //     canvas = document.getElementById('the-canvas'),
-        //     ctx = canvas.getContext('2d');
-
-        // /**
-        //  * Get page info from document, resize canvas accordingly, and render page.
-        //  * @param num Page number.
-        //  */
-        // function renderPage(num) {
-        //     pageRendering = true;
-        //     // Using promise to fetch the page
-        //     pdfDoc.getPage(num).then(function (page) {
-        //         var viewport = page.getViewport({
-        //             scale: scale
-        //         });
-        //         canvas.height += viewport.height;
-        //         canvas.width += viewport.width;
-
-        //         // Render PDF page into canvas context
-        //         var renderContext = {
-        //             canvasContext: ctx,
-        //             viewport: viewport
-        //         };
-        //         var renderTask = page.render(renderContext);
-
-        //         // Wait for rendering to finish
-        //         renderTask.promise.then(function () {
-        //             pageRendering = false;
-        //             if (num !== pdfDoc.numPages) {
-        //                 // New page rendering is pending
-        //                 num++;
-        //                 renderPage(num);
-        //             }
-        //         });
-        //     });
-        // }
-
-        // /**
-        //  * Asynchronously downloads PDF.
-        //  */
-
-        // let pdfData = atob(base64String);
-
-        // pdfjsLib.getDocument({ data: pdfData }).promise.then(function (pdfDoc_) {
-        //     pdfDoc = pdfDoc_;
-
-        //     // Initial/first page rendering
-        //     renderPage(pageNum);
-        // });
     </script>
 </body>
 
